@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import Home from './components/Home';
+import TodoList from './sections/TodoList';
 import './style.scss';
 
 const crender = Component => { 
@@ -13,7 +13,7 @@ const crender = Component => {
   )
 }
 
-crender(Home)
+crender(TodoList)
 
 if(module.hot) {
   module.hot.accept();
