@@ -25,7 +25,7 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     './src/index.js',
-    'webpack-dev-server/client?http://localhost:3000',// host 與 port
+    'webpack-dev-server/client?http://localhost:3001',// host 與 port
     'webpack/hot/only-dev-server',// "only" 可以避免在語法錯誤時重新載入
   ],
   output: {
@@ -42,13 +42,10 @@ module.exports = {
         test: /\.js?$/,
         exclude: /(node_modules|bower_components)/,
         use: [
-          // {
-          //   loader: 'react-hot-loader'
-          // },
           {
             loader: 'babel-loader',
             options: {
-              presets: ['env', 'react'],
+              presets: ['env','es2015', 'stage-3', 'react'],
               plugins: [
                 "transform-decorators-legacy",
                 "transform-class-properties",

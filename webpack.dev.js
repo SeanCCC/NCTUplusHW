@@ -26,7 +26,7 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     './src/index.js',
-    'webpack-dev-server/client?http://localhost:3000', // host 與 port
+    'webpack-dev-server/client?http://localhost:3001', // host 與 port
     'webpack/hot/only-dev-server', // "only" 可以避免在語法錯誤時重新載入
   ],
   output: {
